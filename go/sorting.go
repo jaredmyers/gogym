@@ -4,6 +4,12 @@ import (
    "fmt"
 )
 
+func main() {
+
+   array := []int{11,14,3,8,18,17,43};
+   fmt.Println(bubbleSort(array))
+}
+
 func bubbleSort(array []int) []int {
    for i:=0; i<len(array)-1; i++ {
       for j:=1; j<len(array)-i; j++ {
@@ -39,12 +45,5 @@ func insertionSort(arr []int) []int {
 }
 
 
-func main() {
-
-   array := []int{11,14,3,8,18,17,43};
-   fmt.Println(bubbleSort(array))
-   fmt.Println(selectionSort(array))
-   fmt.Println(insertionSort(array))
-}
 
 
