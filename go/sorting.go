@@ -7,7 +7,7 @@ import (
 func main() {
 
    array := []int{11,14,3,8,18,17,43};
-   bubbleSort(array)
+   quickSort(array, 0, len(array)-1)
    fmt.Println(array)
 }
 
