@@ -41,6 +41,22 @@ func (s *linkedList) AddEnd(data string) {
 		return
 }
 
+func (s *linkedList) AddFront(data string){
+		
+		node := &node{data: data,}
+
+		if s.head == nil {
+				s.head = node
+				s.tail = node
+		}else{
+				node.next = s.head
+				s.head.prev = node
+				s.head = node
+		}
+		s.length++
+		return
+}
+
 
 func (s *linkedList) TraverseForward() error {
 		
