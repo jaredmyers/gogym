@@ -28,13 +28,8 @@ func (s *linkedList) AddEnd(data string) {
 				s.head = node
 				s.tail = node
 		}else{
-				current := s.head
-
-				for current.next != nil {
-						current = current.next
-				}
-				node.prev = current
-				current.next = node
+				node.prev = s.tail
+				s.tail.next = node
 				s.tail = node
 		}
 		s.length++
@@ -57,6 +52,32 @@ func (s *linkedList) AddFront(data string){
 		return
 }
 
+func (s *linkedList) RemoveEnd() error {
+		
+		if s.head == nil {
+				return fmt.Errorf("RemoveError: List Empty")
+		}
+
+		current := s.tail
+		current.prev.next = nil
+		s.tail = current.prev
+
+		return nil
+}
+
+func (s *linkedList) RemoveFront() error {
+		
+		if s.head == nil {
+				return fmt.Errorf("RemoveError: List Empty")
+		}
+
+		current := s.head
+		current.next.prev = nil
+		s.head = current.next
+
+		return nil
+}
+
 
 func (s *linkedList) TraverseForward() error {
 		
@@ -67,9 +88,10 @@ func (s *linkedList) TraverseForward() error {
 		current := s.head
 
 		for current != nil {
-				fmt.Println(current.data)
+				fmt.Printf("%v->", current.data)
 				current = current.next
 		}
+		fmt.Println("")
 		return nil
 }
 
@@ -81,9 +103,10 @@ func (s *linkedList) TraverseReverse() error{
 		current := s.tail
 
 		for current != nil {
-				fmt.Println(current.data)
+				fmt.Printf("%v->", current.data)
 				current = current.prev
 		}
+		fmt.Println("")
 		return nil
 }
 
@@ -101,11 +124,20 @@ func main(){
 		doublyList.AddEnd("this")
 		doublyList.AddEnd("is")
 		doublyList.AddEnd("a")
-		doublyList.AddEnd("test.")
+		doublyList.AddEnd("test")
 
 		doublyList.TraverseForward()
-		fmt.Println("---")
 		doublyList.TraverseReverse()
+		fmt.Println("Head: ",doublyList.GetHead())
+		fmt.Println("Tail: ",doublyList.GetTail())
+
+		doublyList.RemoveEnd()
+		doublyList.TraverseForward()
+		fmt.Println(doublyList.GetTail())
+
+		doublyList.RemoveFront()
+		doublyList.TraverseForward()
+		fmt.Println(doublyList.GetHead())
 		
 }
 
