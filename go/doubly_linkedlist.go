@@ -1,5 +1,5 @@
-//go practice
-// chap4 of C++ gaddis problems
+// golang
+// doubly linkedlist 
 
 package main
 
