@@ -1,7 +1,7 @@
 // golang
 // quicksort
 
-package main
+package sorting	
 
 func quickSort(arr []int, start int, end int) {
 

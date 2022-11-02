@@ -1,17 +1,6 @@
-package main
+package sorting
 
-import (
-   "fmt"
-)
-
-func main() {
-
-   array := []int{11,14,3,8,18,17,43};
-   quickSort(array, 0, len(array)-1)
-   fmt.Println(array)
-}
-
-func bubbleSort(arr []int) {
+func BubbleSort(arr []int) {
    for i:=0; i<len(arr)-1; i++ {
       for j:=1; j<len(arr)-i; j++ {
          if (arr[j-1] > arr[j]){
@@ -21,7 +10,7 @@ func bubbleSort(arr []int) {
    }
 }
 
-func selectionSort(arr []int) {
+func SelectionSort(arr []int) {
    for i:=0; i<len(arr)-1; i++ {
       for j:= i+1; j<len(arr); j++ {
          if arr[j] < arr[i] {
@@ -31,7 +20,7 @@ func selectionSort(arr []int) {
    }
 }
 
-func insertionSort(arr []int) {
+func InsertionSort(arr []int) {
    for i:=1; i<len(arr); i++{
       temp := arr[i]
       j := i-1

@@ -116,28 +116,3 @@ func (s *linkedList) GetHead() string {
 func (s *linkedList) GetTail() string {
 		return s.tail.data
 }
-
-func main(){
-
-		doublyList := initList()
-		doublyList.AddEnd("Hello")
-		doublyList.AddEnd("this")
-		doublyList.AddEnd("is")
-		doublyList.AddEnd("a")
-		doublyList.AddEnd("test")
-
-		doublyList.TraverseForward()
-		doublyList.TraverseReverse()
-		fmt.Println("Head: ",doublyList.GetHead())
-		fmt.Println("Tail: ",doublyList.GetTail())
-
-		doublyList.RemoveEnd()
-		doublyList.TraverseForward()
-		fmt.Println(doublyList.GetTail())
-
-		doublyList.RemoveFront()
-		doublyList.TraverseForward()
-		fmt.Println(doublyList.GetHead())
-		
-}
-

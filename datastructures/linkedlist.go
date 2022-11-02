@@ -45,17 +45,3 @@ func (s *linkedList) Traverse() error {
 		}
 		return nil
 }
-
-func main(){
-		singleList := initList()
-
-		singleList.Add("A")
-		singleList.Add("V")
-		singleList.Add("p")
-
-		err := singleList.Traverse()
-
-		if err != nil {
-				fmt.Println(err.Error())
-		}
-}
