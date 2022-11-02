@@ -1,17 +1,17 @@
 // golang
 // quicksort
 
-package sorting	
+package sorting
 
-func quickSort(arr []int, start int, end int) {
+func QuickSort(arr []int, start int, end int) {
 
 	if end <= start {
 		return
 	}
 
 	pivotIdx := partition(arr, start, end)
-	quickSort(arr, start, pivotIdx-1)
-	quickSort(arr, pivotIdx+1, end)
+	QuickSort(arr, start, pivotIdx-1)
+	QuickSort(arr, pivotIdx+1, end)
 }
 
 func partition(arr []int, start int, end int) int {
