@@ -1,4 +1,4 @@
-package main
+package datastructures
 
 import "fmt"
 
@@ -7,16 +7,16 @@ type node struct {
 		next *node
 }
 
-type linkedList struct {
+type LinkedList struct {
 		head *node
 		length int
 }
 
-func initList() *linkedList {
-		return &linkedList{}
+func InitList() *LinkedList {
+		return &LinkedList{}
 }
 
-func (s *linkedList) Add(data string) {
+func (s *LinkedList) Add(data string) {
 		node := &node{
 				data: data,
 		}
@@ -34,7 +34,7 @@ func (s *linkedList) Add(data string) {
 		return
 }
 
-func (s *linkedList) Traverse() error {
+func (s *LinkedList) Traverse() error {
 		if s.head == nil {
 				return fmt.Errorf("TraverseError: List Empty")
 		}

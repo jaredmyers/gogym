@@ -1,28 +1,28 @@
 // golang
 // doubly linkedlist 
 
-package main
+package datastructures
 
 import "fmt"
 
-type node struct {
+type dllNode struct {
 		data string
-		next *node
-		prev *node
+		next *dllNode
+		prev *dllNode
 }
 
-type linkedList struct {
-		head *node
-		tail *node
+type DoublyLinkedList struct {
+		head *dllNode
+		tail *dllNode
 		length int
 }
 
-func initList() *linkedList {
-		return &linkedList{}
+func InitDoublyLinkedList() *DoublyLinkedList {
+		return &DoublyLinkedList{}
 }
 
-func (s *linkedList) AddEnd(data string) {
-		node := &node{data: data,}
+func (s *DoublyLinkedList) AddEnd(data string) {
+		node := &dllNode{data: data,}
 
 		if s.head == nil {
 				s.head = node
@@ -36,9 +36,9 @@ func (s *linkedList) AddEnd(data string) {
 		return
 }
 
-func (s *linkedList) AddFront(data string){
+func (s *DoublyLinkedList) AddFront(data string){
 		
-		node := &node{data: data,}
+		node := &dllNode{data: data,}
 
 		if s.head == nil {
 				s.head = node
@@ -52,7 +52,7 @@ func (s *linkedList) AddFront(data string){
 		return
 }
 
-func (s *linkedList) RemoveEnd() error {
+func (s *DoublyLinkedList) RemoveEnd() error {
 		
 		if s.head == nil {
 				return fmt.Errorf("RemoveError: List Empty")
@@ -65,7 +65,7 @@ func (s *linkedList) RemoveEnd() error {
 		return nil
 }
 
-func (s *linkedList) RemoveFront() error {
+func (s *DoublyLinkedList) RemoveFront() error {
 		
 		if s.head == nil {
 				return fmt.Errorf("RemoveError: List Empty")
@@ -79,7 +79,7 @@ func (s *linkedList) RemoveFront() error {
 }
 
 
-func (s *linkedList) TraverseForward() error {
+func (s *DoublyLinkedList) TraverseForward() error {
 		
 		if s.head == nil{
 				return fmt.Errorf("TraverseError: Empty List")
@@ -95,7 +95,7 @@ func (s *linkedList) TraverseForward() error {
 		return nil
 }
 
-func (s *linkedList) TraverseReverse() error{
+func (s *DoublyLinkedList) TraverseReverse() error{
 		if s.head == nil{
 				return fmt.Errorf("TraverseError: List Empty")
 		}
@@ -110,9 +110,9 @@ func (s *linkedList) TraverseReverse() error{
 		return nil
 }
 
-func (s *linkedList) GetHead() string {
+func (s *DoublyLinkedList) GetHead() string {
 		return s.head.data
 }
-func (s *linkedList) GetTail() string {
+func (s *DoublyLinkedList) GetTail() string {
 		return s.tail.data
 }
