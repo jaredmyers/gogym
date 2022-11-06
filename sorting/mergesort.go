@@ -1,4 +1,4 @@
-// golang
+// Golang
 // mergesort
 
 package sorting
