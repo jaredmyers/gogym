@@ -3,9 +3,9 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
 	//sort "github.com/jaredmyers/scratch/sorting"
-	ds "github.com/jaredmyers/scratch/datastructures"
+	//ds "github.com/jaredmyers/scratch/datastructures"
 )
 
 func main() {
