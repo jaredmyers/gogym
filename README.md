@@ -17,7 +17,7 @@ testing, playing, learning, for reference
 * [cirular linkedlist](datastructures/dll_circular.go)
 * [stack](datastructures/stack.go)
 * [queue](datastructures/queue.go)
-* heap
+* [heap](datastructures/heap.go)
 * binary search tree
 
 ### Read/Write Files
