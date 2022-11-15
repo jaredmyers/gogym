@@ -1,5 +1,17 @@
-// golang
-// quicksort
+// Golang
+// Quick Sort
+
+// Time
+// ====
+// Best: O(nlogn)
+// Average: O(nlogn)
+// Worst: O(n^2)
+
+// Space
+// =====
+// 0(logn) in-place
+
+// Stable: No
 
 package sorting
 

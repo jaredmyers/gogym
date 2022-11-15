@@ -1,5 +1,17 @@
 // Golang
-// mergesort
+// Merge Sort
+
+// Time
+// ====
+// Best: O(nlogn)
+// Average: O(nlogn)
+// Worst: O(nlogn)
+
+// Space
+// =====
+// 0(n) not in place
+
+// Stable: Yes
 
 package sorting
 

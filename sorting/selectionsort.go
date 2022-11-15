@@ -1,3 +1,18 @@
+// Golang
+// Selection Sort
+
+// Time
+// ====
+// Best: O(n^2)
+// Average: O(n^2)
+// Worst: O(n^2)
+
+// Space
+// =====
+// 0(n) in-place
+
+// Stable: Yes
+
 package sorting
 
 func SelectionSort(arr []int) {

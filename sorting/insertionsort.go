@@ -1,3 +1,18 @@
+// Golang
+// Insertion Sort
+
+// Time
+// ====
+// Best: O(n)
+// Average: O(n^2)
+// Worst: O(n^2)
+
+// Space
+// =====
+// 0(n) in-place
+
+// Stable: Yes
+
 package sorting
 
 func InsertionSort(arr []int) {

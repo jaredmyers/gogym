@@ -2,6 +2,18 @@
 // LSD Radix Sort
 // w/ 2d array
 
+// Time (figure out later)
+// ====
+// Best: O()
+// Average: O()
+// Worst: O()
+
+// Space
+// =====
+// 0()
+
+// Stable: Yes
+
 package sorting
 
 func RadixSort(arr []int) {
