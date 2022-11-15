@@ -6,14 +6,14 @@ package filefun
 
 import (
 	"encoding/csv"
-//	"fmt"
+	//	"fmt"
 	"io"
 	"log"
 	"os"
 )
 
 func check(e error) {
-    // currently looking more efficient way of handling errs
+	// currently looking more efficient way of handling errs
 	if e != nil {
 		log.Panic(e)
 	}
@@ -22,7 +22,7 @@ func check(e error) {
 // not returning errors right now
 //
 
-func CsvReadLine(f string) [][]string{
+func CsvReadLine(f string) [][]string {
 
 	file, err := os.Open(f)
 	check(err)
@@ -48,7 +48,7 @@ func CsvReadLine(f string) [][]string{
 	return data
 }
 
-func CsvReadAll(f string) [][]string{
+func CsvReadAll(f string) [][]string {
 
 	file, err := os.Open(f)
 	check(err)
