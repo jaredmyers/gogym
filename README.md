@@ -23,5 +23,5 @@ testing, playing, learning, for reference
 ### Read/Write Files
 * general
 * [csv](filefun/csv_rw.go)
-* json
+* [json](filefun/json_rw.go)
 * yaml
