@@ -1,4 +1,4 @@
-module github.com/jaredmyers/scratch
+module github.com/jaredmyers/gogym
 
 go 1.19
 
