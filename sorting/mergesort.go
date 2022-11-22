@@ -15,14 +15,14 @@
 
 package sorting
 
-func mergeSort(items []int) []int {
+func MergeSort(items []int) []int {
 
 	if len(items) < 2 {
 		return items
 	} //base case
 
-	first := mergeSort(items[:len(items)/2])
-	second := mergeSort(items[len(items)/2:])
+	first := MergeSort(items[:len(items)/2])
+	second := MergeSort(items[len(items)/2:])
 
 	return merge(first, second)
 }
