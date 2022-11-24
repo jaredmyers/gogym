@@ -9,7 +9,7 @@ testing, playing, learning, for reference
 * [quicksort](sorting/quicksort.go)
 * [mergesort](sorting/mergesort.go)
 * [radixsort](sorting/radixsort.go)
-* countingsort
+* [countingsort](sorting/countingsort.go)
 
 ### Datastructures
 * [linkedlist](datastructures/linkedlist.go)
@@ -21,7 +21,16 @@ testing, playing, learning, for reference
 * binary search tree
 
 ### Read/Write Files
-* general
+* [general](filefun/genfiles_rw.go)
 * [csv](filefun/csv_rw.go)
 * [json](filefun/json_rw.go)
 * yaml
+
+### Web
+* things
+
+### Databases
+* things
+
+### Messaging
+* more things
