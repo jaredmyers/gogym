@@ -101,48 +101,48 @@ func (n *bstNode) contains(data int) bool {
 
 func (b *BinarySearchTree) TravLevelOrder() {
 
-		// print nodes one layer at a time
-		// BFS
+	// print nodes one layer at a time
+	// BFS
 
-		if b.root == nil {
-				return
-		}
+	if b.root == nil {
+		return
+	}
 
-		queue := []bstNode{}
+	queue := []bstNode{}
 
-		queue = append(queue, *b.root)
-		b.root.travLevelOrder(b.root, queue)
+	queue = append(queue, *b.root)
+	b.root.travLevelOrder(b.root, queue)
 
 }
 
 func (n *bstNode) travLevelOrder(node *bstNode, q []bstNode) {
 
-		// print + pop next off queue
-		fmt.Print(q[0].data, "-")
-		q = q[1:]
-		
-		// append to next layer unless leaf
-		if node.left != nil {
-				q = append(q, *node.left)
-		}
-		if node.right != nil {
-				q = append(q, *node.right)
-		}
+	// print + pop next off queue
+	fmt.Print(q[0].data, "-")
+	q = q[1:]
 
-		// if isEmpty even after next layer attempt
-		// at end, return
-		if len(q) == 0{
-				return
-		}
+	// append to next layer unless leaf
+	if node.left != nil {
+		q = append(q, *node.left)
+	}
+	if node.right != nil {
+		q = append(q, *node.right)
+	}
 
-		// go again
-		node.travLevelOrder(&q[0], q)
+	// if isEmpty even after next layer attempt
+	// at end, return
+	if len(q) == 0 {
+		return
+	}
+
+	// go again
+	node.travLevelOrder(&q[0], q)
 
 }
 
 func (b *BinarySearchTree) TravPostOrder() {
 
-    // traverse left
+	// traverse left
 	// then traverse right
 	// then print values
 	// (so print a value only after both its subtrees)
@@ -169,7 +169,7 @@ func (n *bstNode) travPostOrder(root *bstNode) {
 
 func (b *BinarySearchTree) TravPreOrder() {
 
-    // print value of current node,
+	// print value of current node,
 	// then traverse left
 	// then traverse right
 	// (so dig left and print values on the way down)
@@ -188,7 +188,7 @@ func (n *bstNode) travPreOrder(root *bstNode) {
 		return
 	}
 
-    // preorder prints before recursive calls
+	// preorder prints before recursive calls
 	fmt.Print(root.data, "-")
 	n.travPreOrder(root.left)
 	n.travPreOrder(root.right)
@@ -196,7 +196,7 @@ func (n *bstNode) travPreOrder(root *bstNode) {
 
 func (b *BinarySearchTree) TravInOrder() {
 
-    // traverse left,
+	// traverse left,
 	// print value,
 	// then traverse right
 	// (so dig all the way left, but print values on the way up)
