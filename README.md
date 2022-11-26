@@ -18,7 +18,7 @@ testing, playing, learning, for reference
 * [stack](datastructures/stack.go)
 * [queue](datastructures/queue.go)
 * [heap](datastructures/heap.go)
-* binary search tree
+* [binary search tree](datastructures/bst.go)
 
 ### Read/Write Files
 * [general](filefun/genfiles_rw.go)
@@ -32,5 +32,5 @@ testing, playing, learning, for reference
 ### Databases
 * things
 
-### Messaging
+### MQ
 * more things
