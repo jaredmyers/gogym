@@ -24,7 +24,7 @@ testing, playing, learning, for reference
 * [general](filefun/genfiles_rw.go)
 * [csv](filefun/csv_rw.go)
 * [json](filefun/json_rw.go)
-* yaml
+* [yaml](filefun/yaml_rw.go)
 
 ### Web
 * things
