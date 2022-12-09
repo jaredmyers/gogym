@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"log"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jaredmyers/gogym/api/gin_mongo/controllers"
@@ -25,7 +26,9 @@ var (
 func init() {
 	ctx = context.TODO()
 
-	conn := options.Client().ApplyURI("mongodb://localhost:27017")
+	mongo_uri := os.Getenv("MONGO_URI")
+
+	conn := options.Client().ApplyURI(mongo_uri)
 	client, err = mongo.Connect(ctx, conn)
 	if err != nil {
 		log.Fatal(err)
