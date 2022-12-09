@@ -1,5 +1,9 @@
 ## GoLang RestAPI
 
+<p align="center"> <!-- it hurts me too.-->
+  <img src="https://github.com/jaredmyers/gogym/blob/main/api/restAPI.png?raw=true" />
+</p>
+
 Lessons from this build will be incorporated into this [Microservice Architecture Grocery App](https://github.com/jaredmyers/groceryapp).
 
 * Created using MVC achitecture
