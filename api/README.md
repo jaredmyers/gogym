@@ -9,4 +9,5 @@ Lessons from this build will be incorporated into this [Microservice Architectur
 * Created using MVC achitecture
 * Containing GET, POST, PATCH, DELETE request support for retrieving user information
 * Utilized JSON tags for stuct modeling to JSON for storing documents in MongoDB.
-* Leveraged Docker muli-staged builds and ECR registration for Elastic Container deployment. 
+* Leveraged Docker muli-staged builds and ECR registration for Elastic Container deployment.
+* Also deployed using EC2 instances after ECS proved unrealistic on vCPU and memory consumption.
