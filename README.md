@@ -27,7 +27,9 @@ testing, playing, learning, for reference
 * [yaml](filefun/yaml_rw.go)
 
 ### Web
-* things
+* net/http
+* [Gin RestAPI](api/gin_mongo)
+
 
 ### Databases
 * things
