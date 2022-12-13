@@ -10,6 +10,7 @@ testing, playing, learning, for reference
 * [mergesort](sorting/mergesort.go)
 * [radixsort](sorting/radixsort.go)
 * [countingsort](sorting/countingsort.go)
+* heap sort
 
 ### Datastructures
 * [linkedlist](datastructures/linkedlist.go)
@@ -30,9 +31,13 @@ testing, playing, learning, for reference
 * net/http
 * [Gin RestAPI](api/gin_mongo)
 
-
 ### Databases
-* things
+* mysql
+* mongodb
+* redis
 
 ### MQ
-* more things
+* rabbitMQ
+* kafka
+
+### Graph
