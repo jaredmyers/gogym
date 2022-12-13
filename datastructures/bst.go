@@ -39,18 +39,18 @@ func (n *bstNode) insert(data int) error {
 		} else {
 			n.left.insert(data)
 		}
-	} else {
-		// if value greater, go right
-		// do not allow duplicate values
-		if data > n.data {
-			if n.right == nil {
-				n.right = &bstNode{data: data}
-			} else {
-				n.right.insert(data)
-			}
-		}
+		return nil
 	}
 
+	// if value greater, go right
+	// do not allow duplicate values
+	if data > n.data {
+		if n.right == nil {
+			n.right = &bstNode{data: data}
+		} else {
+			n.right.insert(data)
+		}
+	}
 	return nil
 }
 
@@ -75,25 +75,23 @@ func (n *bstNode) contains(data int) bool {
 	if data < n.data {
 		if n.left == nil {
 			return false
-		} else {
-			// make sure bool survives recursion stack lol
-			if n.left.contains(data) {
-				return true
-			}
 		}
-	} else {
-		// if data greater than current, but right is null
-		// data not in tree, if right exists, dig
-		if data > n.data {
-			if n.right == nil {
-				return false
-			} else {
-				// make sure bool survives recursion stack lol
-				if n.right.contains(data) {
-					return true
-				}
-			}
+		// make sure bool survives recursion stack lol
+		if n.left.contains(data) {
+			return true
 		}
+	}
+	// if data greater than current, but right is null
+	// data not in tree, if right exists, dig
+	if data > n.data {
+		if n.right == nil {
+			return false
+		}
+		// make sure bool survives recursion stack lol
+		if n.right.contains(data) {
+			return true
+		}
+
 	}
 
 	return false
