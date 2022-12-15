@@ -10,7 +10,7 @@ testing, playing, learning, for reference
 * [mergesort](sorting/mergesort.go)
 * [radixsort](sorting/radixsort.go)
 * [countingsort](sorting/countingsort.go)
-* heap sort
+* [heap sort](sorting/heapsort.go)
 
 ### Datastructures
 * [linkedlist](datastructures/linkedlist.go)
@@ -18,7 +18,7 @@ testing, playing, learning, for reference
 * [cirular linkedlist](datastructures/dll_circular.go)
 * [stack](datastructures/stack.go)
 * [queue](datastructures/queue.go)
-* [heap](datastructures/heap.go)
+* [heap](datastructures/minheap.go)
 * [binary search tree](datastructures/bst.go)
 
 ### Read/Write Files
