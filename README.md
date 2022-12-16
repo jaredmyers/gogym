@@ -21,6 +21,11 @@ testing, playing, learning, for reference
 * [heap](datastructures/minheap.go)
 * [binary search tree](datastructures/bst.go)
 
+### Searching
+* Binary Search
+* Breadth First Search
+* Depth First Search
+
 ### Read/Write Files
 * [general](filefun/genfiles_rw.go)
 * [csv](filefun/csv_rw.go)
