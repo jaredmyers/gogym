@@ -46,3 +46,5 @@ testing, playing, learning, for reference
 * kafka
 
 ### Graph
+
+### Design Patterns
