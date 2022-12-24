@@ -48,3 +48,6 @@ testing, playing, learning, for reference
 ### Graph
 
 ### Design Patterns
+* creational
+* structual
+* behavioral
