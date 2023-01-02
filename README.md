@@ -51,3 +51,5 @@ testing, playing, learning, for reference
 * creational
 * structual
 * behavioral
+
+### Concurrency Patterns
