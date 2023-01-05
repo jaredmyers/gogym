@@ -46,6 +46,7 @@ testing, playing, learning, for reference
 * kafka
 
 ### Graph
+* shortest path
 
 ### Design Patterns
 * creational
