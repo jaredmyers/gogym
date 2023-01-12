@@ -2,7 +2,31 @@ package abstractfactory
 
 import "fmt"
 
-func DatabaseFactory(env string) Database {
+// -- Helper Function -- //
+func SetupConstructors(env string) (DatabaseCreator, FilesystemCreator) {
+	dbFactory := AbstractFactory("database")
+	fsFactory := AbstractFactory("filesystem")
+
+	return dbFactory(env).(DatabaseCreator), fsFactory(env).(FilesystemCreator)
+
+}
+
+// -- Abstract Factory for Factories -- //
+func AbstractFactory(fact string) factory {
+	switch fact {
+	case "database":
+		return DatabaseFactory
+	case "filesystem":
+		return FilesystemFactory
+	default:
+		return nil
+	}
+}
+
+type factory func(string) any
+
+// -- Database Factory -- //
+func DatabaseFactory(env string) any {
 	switch env {
 	case "production":
 		return &mongoDB{
@@ -18,7 +42,7 @@ func DatabaseFactory(env string) Database {
 }
 
 type (
-	Database interface {
+	DatabaseCreator interface {
 		GetData(string) string
 		PutData(string, string)
 	}
@@ -52,4 +76,60 @@ func (mdb *mongoDB) PutData(query, data string) {
 
 func (sql *sqlite) PutData(query, data string) {
 	sql.database[query] = data
+}
+
+// -- FileSystem Factory -- //
+
+func FilesystemFactory(env string) any {
+	switch env {
+	case "production":
+		return &ntfs{files: make(map[string]file)}
+	case "development":
+		return &ext4{files: make(map[string]file)}
+	default:
+		return nil
+	}
+}
+
+type (
+	file struct {
+		name    string
+		content string
+	}
+
+	ntfs struct {
+		files map[string]file
+	}
+
+	ext4 struct {
+		files map[string]file
+	}
+	FilesystemCreator interface {
+		CreateFile(string)
+		FindFile(string) file
+	}
+)
+
+func (n *ntfs) CreateFile(path string) {
+	file := file{content: "NTFS file", name: path}
+	n.files[path] = file
+	fmt.Println("ntfs")
+}
+func (n *ntfs) FindFile(path string) file {
+	if _, ok := n.files[path]; !ok {
+		return file{}
+	}
+	return n.files[path]
+}
+
+func (e *ext4) CreateFile(path string) {
+	file := file{content: "ext4 file", name: path}
+	e.files[path] = file
+	fmt.Println("ext")
+}
+func (e *ext4) FindFile(path string) file {
+	if _, ok := e.files[path]; !ok {
+		return file{}
+	}
+	return e.files[path]
 }
