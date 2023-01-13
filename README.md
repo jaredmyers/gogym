@@ -34,7 +34,7 @@ testing, playing, learning, for reference
 
 ### Web
 * net/http
-* [Gin RestAPI](api/gin_mongo)
+* [Gin RestAPI](api/)
 
 ### Databases
 * mysql
