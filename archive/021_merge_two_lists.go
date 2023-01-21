@@ -3,7 +3,7 @@
 
 // LEETCODE: 21
 
-package archive
+package main
 
 func mergeTwoLists(list1, list2 *ListNode) *ListNode {
 
