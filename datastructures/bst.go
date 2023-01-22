@@ -226,10 +226,59 @@ func (n *bstNode) travInOrder(root *bstNode) {
 // 2. node to remove has a right subtree, but no left subtree
 // 3. node to remove has a left subtree, but no right subtree
 // 4. node to remove has both left and right subtrees
-func (b *BinarySearchTree) Remove(data int) {
+
+func (b *BinarySearchTree) Remove(data int) error {
+
+	if b.root != nil {
+		if b.root.contains(data) {
+			b.root.remove(data)
+			return nil
+		}
+	}
+	return fmt.Errorf("Data not in tree")
 
 }
 
-func (n *bstNode) remove() {
+func (n *bstNode) remove(data int) *bstNode {
 
+	if n == nil {
+		return nil
+	}
+
+	if data < n.data {
+		n.left = n.left.remove(data)
+		return n
+	}
+
+	if data > n.data {
+		n.right = n.right.remove(data)
+		return n
+	}
+	// case 1: node to remove is leaf node
+	if n.left == nil && n.right == nil {
+		n = nil
+		return nil
+	}
+	// case 2: node to remove has right subtree but no left subtree
+	if n.left == nil {
+		n = n.right
+		return n
+	}
+	// case 3: node to remove has a left subtree but no right subtree
+	if n.right == nil {
+		n = n.left
+		return n
+	}
+	// case 4: node to remove has both left & right subtree
+	leftMostInRight := n.right
+	// finding smallest val in right subtree (find successor)
+	for leftMostInRight != nil && leftMostInRight.left != nil {
+		leftMostInRight = leftMostInRight.left
+	}
+	// overwrite node with new successor
+	n.data = leftMostInRight.data
+	// remove the duplicate successor (always will be case 1,2, or 3 removal)
+	n.right = n.right.remove(n.data)
+
+	return n
 }
