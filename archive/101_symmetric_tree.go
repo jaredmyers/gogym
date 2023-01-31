@@ -21,8 +21,10 @@ func isMirror(left, right *TreeNode) bool {
 	return left.Val == right.Val && isMirror(left.Right, right.Left) && isMirror(left.Left, right.Right)
 }
 
+/*
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
 }
+*/

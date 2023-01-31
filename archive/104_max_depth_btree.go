@@ -15,8 +15,10 @@ func maxDepth(root *TreeNode) int {
 	return int(math.Max(leftHeight, rightHeight)) + 1
 }
 
+/*
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
 }
+*/
