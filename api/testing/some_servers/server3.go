@@ -191,7 +191,7 @@ func (a adminPortal) handler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("<html><h1>Secret Admin Portal</h1></html>"))
 }
 
-func main() {
+func nmain() {
 
 	admin := newAdminPortal()
 	coasterHandlers := newCoasterHandlers()

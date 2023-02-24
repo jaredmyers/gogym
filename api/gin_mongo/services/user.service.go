@@ -11,7 +11,7 @@ import (
 
 type UserService struct {
 	userCollection *mongo.Collection
-	ctx            context.Context
+	ctx            context.Context // i've learned storing ctx in struct is no good.
 }
 
 func NewUserService(userCollection *mongo.Collection, ctx context.Context) *UserService {
