@@ -26,7 +26,7 @@ func spiralOrder(matrix [][]int) []int {
 			result = append(result, matrix[down][col])
 		}
 
-		//right
+		//up
 		for row := down - 1; row > up; row-- {
 			result = append(result, matrix[row][left])
 		}
